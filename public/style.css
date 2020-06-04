@@ -1,0 +1,586 @@
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#popup {
+  position: fixed;
+  display: none;
+  width: 75%;
+  height: 25%;
+  z-index: 3;
+  background-color: white;
+  border-radius: 12px;
+  top: 25%;
+  align-self: center;
+  padding: 20px 40px 50px;
+}
+
+#popup p {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 12px;
+  align-self: center;
+  margin-top: 20px;
+}
+#close-popup-icon {
+  font-size: 40px;
+  color: white;
+  z-index: 3;
+  position: absolute;
+  font-weight: bold;
+  right: 40px;
+  top: 40px;
+}
+
+#popup div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#postcard-link {
+  text-align: center;
+}
+@media (min-width: 768px){
+    h1 {
+        font-size: 50px;
+        margin: 30px 25px;
+    }
+    main {
+        margin: 20px 180px;
+    }
+    .postcard-container {
+        flex-direction: row;
+        height: 450px;
+    }
+    #color1{
+        height: 40px;
+        width: 40px;
+    }
+    #color2{
+        height: 40px;
+        width: 40px;
+    }
+    #color3{
+        height: 40px;
+        width: 40px;
+    }
+    #color4{
+        height: 40px;
+        width: 40px;
+    }
+    #color5{
+        height: 40px;
+        width: 40px;
+    }
+    #color6{
+        height: 40px;
+        width: 40px;
+    }
+    #color7{
+        height: 40px;
+        width: 40px;
+    }
+    #color8{
+        height: 40px;
+        width: 40px;
+    }
+    #color9{
+        height: 40px;
+        width: 40px;
+    }
+    #font-1 {
+        font-size: 20px;
+    }
+    #font-2 {
+        font-size: 20px;
+    } 
+    #font-3 {
+        font-size: 20px;
+    } 
+    #font-4 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    div.imageWrapper {
+        border-width: 3px !important;
+    }
+    ::placeholder{
+        font-size: 22px;
+    }
+    .letter{
+        font-size: 22px;
+    }
+    .postcard-toolbox {
+        margin-top: 35px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 20px;
+        font-weight: 700;
+        border-width: 2px;
+        position: relative;
+        top: 40px;
+    }
+}
+/* tablet or laptop */
+@media (min-width: 600px) {
+    div.imageWrapper {
+        height: 90%;
+        width: 50%;
+        align-self: center;
+    }
+    textarea {
+        height: 90%;
+        width: 50%;
+        align-self: center;
+    }
+    #bar {
+        height: 100%;
+        width: 2px;
+        margin: 0 20px;
+        background-color: black;
+    }
+    .toolbox-1{
+        flex: 1.5;
+    }
+    .toolbox-2{
+        flex: 2;
+        margin: 0 6px;
+    }
+   #replace-container{
+      margin-top: 50px !important;
+    }
+    #replace-button {
+      padding: 10px 18px;
+      font-size: 20px;
+      border: solid;
+      border-width: 2px;
+      font-weight: 700;
+      border-color: black;
+    }
+}
+/* tablet */
+@media (max-width: 768px) and (min-width: 600px) {
+    h1 {
+        font-size: 50px;
+        margin: 50px 25px;
+    }
+    main {
+        margin: 4px 50px;
+    }
+    .postcard-container {
+        flex-direction: row;
+        height: 450px;
+    }
+    ::placeholder{
+        font-size: 24px;
+    }
+    .letter {
+        font-size: 24px;
+    }
+    .postcard-toolbox {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 35px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .toolbox-1{
+        flex: 1.5;
+    }
+    .toolbox-2{
+        flex: 2;
+        margin: 0 6px;
+    }
+    #color1{
+        height: 40px;
+        width: 40px;
+    }
+    #color2{
+        height: 40px;
+        width: 40px;
+    }
+    #color3{
+        height: 40px;
+        width: 40px;
+    }
+    #color4{
+        height: 40px;
+        width: 40px;
+    }
+    #color5{
+        height: 40px;
+        width: 40px;
+    }
+    #color6{
+        height: 40px;
+        width: 40px;
+    }
+    #color7{
+        height: 40px;
+        width: 40px;
+    }
+    #color8{
+        height: 40px;
+        width: 40px;
+    }
+    #color9{
+        height: 40px;
+        width: 40px;
+    }
+    #font-1 {
+        font-size: 20px;
+    }
+    #font-2 {
+        font-size: 20px;
+    } 
+    #font-3 {
+        font-size: 20px;
+    } 
+    #font-4 {
+        font-size: 20px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 20px;
+        font-weight: 700;
+        border-width: 2px;
+        position: relative;
+        top: 40px;
+    }
+}
+
+/* phone */
+@media (max-width: 600px){
+    h1 {
+        font-size: 32px;
+        margin: 20px;
+    }
+    main {
+        margin: 4px 24px;
+    }
+    .postcard-container {
+        flex-direction: column;
+        height: 400px;
+    }
+    div.imageWrapper {
+        height: 50%;
+    }
+    textarea {
+        height: 50%;
+    }
+    ::placeholder{
+        font-size: 16px;
+    }
+    .letter {
+        font-size: 16px;
+    }
+    .postcard-toolbox {
+        flex-direction: column;
+        margin-top: 18px;
+    }
+    .button-container {
+        margin-top: 30px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    #color1{
+        height: 30px;
+        width: 30px;
+    }
+    #color2{
+        height: 30px;
+        width: 30px;
+    }
+    #color3{
+        height: 30px;
+        width: 30px;
+    }
+    #color4{
+        height: 30px;
+        width: 30px;
+    }
+    #color5{
+        height: 30px;
+        width: 30px;
+    }
+    #color6{
+        height: 30px;
+        width: 30px;
+    }
+    #color7{
+        height: 30px;
+        width: 30px;
+    }
+    #color8{
+        height: 30px;
+        width: 30px;
+    }
+    #color9{
+        height: 30px;
+        width: 30px;
+    }
+    #font-1 {
+        font-size: 16px;
+    }
+    #font-2 {
+        font-size: 16px;
+    } 
+    #font-3 {
+        font-size: 16px;
+    } 
+    #font-4 {
+        font-size: 16px;
+    }
+    button {
+        padding: 4px 10px;
+        font-size: 16px;
+        border-width: 1px;
+    }
+    #choose-tag{
+        font-size: 24px !important;
+    }
+     #bar {
+        width: 100%;
+        height: 2px;
+         margin: 10px 0px 10px;
+        background-color: black;
+    }
+   #replace-button {
+      border: solid;
+      border-width: 1px;
+      padding: 4px 20px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+}
+
+
+/* styles */
+
+    /* size of margin, border and padding is included in size of element 
+    in internal CSS calculations */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        /* font stack */
+        font-family: Verbana, sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        /* item spacing will be controlled by flex-grow */
+
+        min-height: 100vh;
+        /* the height of the body is at least the height of the viewport */
+        /* needed to make sticky footer work */
+    }
+
+    header {
+        flex-grow: 0;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        padding-left: 20px;
+    }
+
+    main {
+        
+        /* flex item commands */
+        flex-grow: 1;  /* take one share of any extra space */
+        /* flex container commands */
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.imageWrapper {
+        /* padding: 30px; */
+        border-style: dashed;
+        border-width: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .color-chooser {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    #color1{
+        background-color: #e6e2cf;
+        margin: 10px 5px 0;
+        border: solid;
+        cursor: pointer;
+    }
+    #color1:hover, #color2:hover, #color3:hover,#color4:hover,#color5:hover,#color6:hover,#color7:hover,#color8:hover,#color9:hover{
+        border: dashed;
+    }
+    #color2{
+        background-color: #dbcaac;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color3{
+        background-color: #c9cbb3;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color4{
+        background-color: #bbc9ca;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color5{
+        background-color: #a6a5b5;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color6{
+        background-color: #b5a6ab; 
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color7{
+        background-color: #eccfcf;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color8{
+        background-color: #eceeeb;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+    #color9{
+        background-color: #bab9b5;
+        margin: 10px 5px 0;
+        cursor: pointer;
+    }
+
+    textarea {
+        border: none;
+        overflow: auto;
+        resize: none;
+        outline-color: lightskyblue;
+        background-color: transparent;
+        margin-top: 10px;
+    }
+
+    .letter {
+        font-family: 'Indie Flower';
+    }
+
+    .postcard-container {
+        background-color: #e6e2cf;
+        display: flex;
+        margin: 10px 0px;
+        border-radius: 30px;
+        padding: 24px;
+    }
+    .postcard-toolbox {
+        display: flex;
+        margin-bottom: 18px;
+    }
+
+    img#serverImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #replace-container {
+        height: 30%;
+        width: 100%;
+        display: none;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    div#controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        position: absolute;
+    }
+
+    input#fileChooser {
+        display: none;
+    }
+    input#fileReplacer {
+        display: none;
+    }
+
+    footer {
+        /* flex item commands */
+        flex-grow: 0;  /* I don't take up any extra space */
+
+        /* flex container commands */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .glitchButton {
+        margin: .5em;
+    }
+
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    #font-1 {
+        font-family: 'Indie flower';
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+    #font-2 {
+        font-family: 'Dancing Script';
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+    #font-3 {
+        font-family: 'Long Cang';
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+    #font-4 {
+        font-family: 'Homemade Apple';
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+    button {
+        border-color: black;
+        background-color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #choose-tag {
+        font-size: 30px;
+    }
+    
+
+
+  
+
